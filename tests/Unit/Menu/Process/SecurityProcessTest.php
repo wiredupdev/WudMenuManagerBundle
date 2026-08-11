@@ -84,14 +84,14 @@ class SecurityProcessTest extends TestCase
         ], $this->getMenuVisibleItemsIds($menu));
     }
 
-    private function getMenuVisibleItemsIds(MenuItemInterface $menuItem, array $items = []): array
+    private function getMenuVisibleItemsIds(MenuItemInterface $menuItem, array &$items = []): array
     {
         if ($menuItem->isVisible()) {
-            $items[] = $menuItem;
+            $items[] = $menuItem->getId();
         }
 
         foreach ($menuItem as $child) {
-            $items += $this->getMenuVisibleItemsIds($child, $items);
+             $this->getMenuVisibleItemsIds($child, $items);
         }
 
         return $items;

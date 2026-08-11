@@ -1,6 +1,6 @@
 <?php
 
-namespace Menu\UriGenerator;
+namespace Wiredupdev\MenuManagerBundle\Tests\Unit\Menu\UriGenerator;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Menu;
+namespace Wiredupdev\MenuManagerBundle\Tests\Unit\Menu;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
@@ -49,6 +49,24 @@ class MenuFactoryTest extends TestCase
                     'uri' => [
                         'link' => 'https://www.example.com/product-partner',
                     ],
+                    'children' => [
+                        [
+                            'id' => 'partner_product_1',
+                            'label' => 'Partner product 1',
+                            'uri' => [
+                                'link' => 'https://www.example.com/product-partner_1',
+                            ],
+                            'children' => [
+                                [
+                                    'id' => 'partner_product_1_1',
+                                    'label' => 'Partner product 1 1',
+                                    'uri' => [
+                                        'link' => 'https://www.example.com/product-partner_1_1',
+                                    ],
+                                ]
+                            ]
+                        ],
+                    ]
                 ],
             ],
         ]);

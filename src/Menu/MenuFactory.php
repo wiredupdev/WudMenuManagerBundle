@@ -76,6 +76,7 @@ readonly class MenuFactory
             $this->setDefaults($resolver);
             $resolver->setAllowedTypes('id', 'string');
             $resolver->setRequired(['label', 'id']);
+            $this->setChildren($resolver);
         });
     }
 
