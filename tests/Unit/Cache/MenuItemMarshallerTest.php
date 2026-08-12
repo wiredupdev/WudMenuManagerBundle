@@ -1,6 +1,6 @@
 <?php
 
-namespace Cache;
+namespace Wiredupdev\MenuManagerBundle\Tests\Unit\Cache;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
@@ -58,11 +58,15 @@ class MenuItemMarshallerTest extends TestCase
                     '__menu' => [
                         'id' => 'main_meu',
                         'label' => '',
+                        'attributes' => [],
+                        'position' => 0,
                         'uri' => null,
                         'children' => [
                             'home' => [
                                 'id' => 'home',
                                 'label' => 'Home',
+                                'attributes' => [],
+                                'position' => 1,
                                 'uri' => [
                                     'raw' => [
                                         'value' => 'https://www.example.com/home',

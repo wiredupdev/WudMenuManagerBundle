@@ -49,6 +49,8 @@ class MenuItemMarshaller implements MarshallerInterface
         return [
             'id' => $data->getId(),
             'label' => $data->getLabel(),
+            'attributes' => $data->getAttributes(),
+            'position' => $data->getPosition(),
             'uri' => !$data->getUriType() ? null : [
                 'raw' => [
                     'value' => $data->getRawUri(),

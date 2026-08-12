@@ -32,6 +32,8 @@ interface MenuItemInterface
 
     public function getId(): string;
 
+    public function getLabel(): string;
+
     public function getUri(): ?string;
 
     public function getUriParams(): ?array;

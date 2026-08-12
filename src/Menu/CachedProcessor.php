@@ -55,6 +55,6 @@ readonly class CachedProcessor implements ProcessorInterface
 
     public function hasProcess(string $class): bool
     {
-        $this->processor->hasProcess($class);
+        return $this->processor->hasProcess($class);
     }
 }
